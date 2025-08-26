@@ -1,3 +1,6 @@
+### General ###
+*.meta
+
 ### Unity ###
 /[Ll]ibrary/
 /[Tt]emp/
