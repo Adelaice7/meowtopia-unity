@@ -20,6 +20,11 @@ public class NeedsTicker : MonoBehaviour {
     float accum;
 
     void Start() {
+        // Redesign Injection
+        if (gameObject.GetComponent<HomeCanvasGenerator>() == null) {
+            gameObject.AddComponent<HomeCanvasGenerator>();
+        }
+
         if (SaveSystem.Current == null) SaveSystem.LoadOrCreate();
         ApplyOfflineCatchup();
         RefreshUI();
